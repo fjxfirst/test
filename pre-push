@@ -7,6 +7,6 @@ const rl = readline.createInterface({
 });
 
 rl.question('请输入您的姓名：', (name) => {
-  console.log(`您好，${name}！`);
+  console.log(`您好3，${name}！`);
   rl.close();
 });

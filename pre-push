@@ -1,8 +1,12 @@
 #! /usr/bin/env   node
-const readlineSync = require('readline-sync');
-const versionName = '1';
-console.log(versionName)
+const readline = require('readline');
 
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
 
-const name = readlineSync.question('请输入您的姓名：');
-console.log(`您好，${name}！`);
+rl.question('请输入您的姓名：', (name) => {
+  console.log(`您好，${name}！`);
+  rl.close();
+});
